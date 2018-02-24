@@ -1,16 +1,34 @@
-var n = 70304
-var finalStringArray = [String]()
-var m = 1
-// while n is greater than 0 we append its digits to string array.
-while(n>0){
-    let temp = String((n%10)*m)
-    if(temp != "0"){
-        finalStringArray.append(temp)
+let str = "[]{(})"
+
+var array = [String]()
+
+for e in Array(str){
+    // For each element("{", "(", "}") if that element closes we just take its pair form array. If its not we push it to array.
+    if(e == "]"){
+        if let lastElement = array.last {
+            if(lastElement == "["){
+                array.removeLast()
+            }
+        }
+    }else if(e == "}"){
+        if let lastElement = array.last {
+            if(lastElement == "{"){
+                array.removeLast()
+            }
+        }
+    }else if(e == ")"){
+        if let lastElement = array.last {
+            if(lastElement == "("){
+                array.removeLast()
+            }
+        }
+    }else{
+        array.append(String(e))
     }
-    n = n/10
-    m *= 10
 }
-let reversedFinalStringArray = Array(finalStringArray.reversed())
-// we reverse that string array and concat them with seperator " + "
-let finalString = reversedFinalStringArray.joined(separator: " + ")
-print(finalString)
+// In the last if we matched every paranthesis. It is true
+if(array.isEmpty){
+    print("True")
+}else{
+    print("False")
+}
