@@ -54,6 +54,7 @@
 		68C1E1CC2072770600ABAE27 /* ImageChangerButton */ = {
 			isa = PBXGroup;
 			children = (
+				68C1E1D92072770800ABAE27 /* Info.plist */,
 				68C1E1DF2072772D00ABAE27 /* NotNow */,
 				68C1E1CF2072770600ABAE27 /* ViewController.swift */,
 				68C1E1D12072770600ABAE27 /* Main.storyboard */,
@@ -67,7 +68,6 @@
 			children = (
 				68C1E1CD2072770600ABAE27 /* AppDelegate.swift */,
 				68C1E1D62072770800ABAE27 /* LaunchScreen.storyboard */,
-				68C1E1D92072770800ABAE27 /* Info.plist */,
 			);
 			path = NotNow;
 			sourceTree = "<group>";
